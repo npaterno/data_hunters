@@ -10,7 +10,7 @@ Our role is to collect and cultivate supplemental data sets for use in the `open
 
 # Contributing 
 --------------
-We will follow the process for adding new data outlined below and modified from the {openintro} package.
+We will follow the process for adding new data outlined below and modified from the `openintro` package.
 
  
 The following steps use the **devtools** and **usethis** packages for
