@@ -63,31 +63,56 @@ If you are a better visual learner, there will be workshops/live demos periodica
 Before proceeding, make sure you have your GitHub username and the email you use to login handy.
 
 1. Setting Up Git Credentials
+
     A. Open the Command Prompt (Windows) or Terminal (Mac). Run each command below sequentially. 
+    
         i. git config --global user.name "your_github_user_name"
+        
         ii. git config --global user.email "email_for_github_login"
+        
         iii. git config --list 
+        
             a. This command will confirm that the first two commands ran correctly.
+            
     B. Open RStudio and run the code below in the Console. 
+    
         i. (optional) If not installed, run install.packages(c("devtools", "usethis"))
+        
         ii. usethis::create_github_token()
-            a. This will open a web browser and create a Personal Access Token (PAT) for your GitHub account. Copy this token. 
+        
+            a. This will open a web browser and create a Personal Access
+            Token (PAT) for your GitHub account. Copy this token. 
+            
         iii. gitcreds::gitcreds_set()
+        
             a. Paste the PAT when prompted
+            
         iv. gh::gh_whoami()
+        
             a. This will show your username, email and confirm the token saved correctly. 
             
 2. Installing RTools
+
     A. Mac 
+    
         i. Open Terminal and run the command below.
+        
             a. xcode-select --install
+            
     B. Windows
+    
         i. Go to the [RTools](https://cran.r-project.org/bin/windows/rtools) website.
+        
         ii. Install the x-86 version of RTools
+        
         iii. Open RStudio and run the code below in the Console.
+        
             a. writeLines('PATH = "${RTOOLS40_HOME}\\usr\\bin; ${PATH}" ', con = "~/.Renviron)
+            
     C. Mac \& Windows
-        i. Open RStudio and run the code below in the Console to confirm that your system is ready to build packages. 
+    
+        i. Open RStudio and run the code below in the Console to confirm that your system is ready to build packages.
+        
             a. pkgbuild::check_build_tools()
 
 
