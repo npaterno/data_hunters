@@ -5,7 +5,8 @@ Authors@R: c(
     person("Nick", "Paterno", email = "nicholas.paterno@gmail.com", role = c("aut","cre")), 
     person("Frank", "Marfai", role = c("aut")),
     person("Adam", "Gilbert", role = c("aut")),
-    person("Jana", "Archibald", role = c("aut"))
+    person("Jana", "Archibald", role = c("aut")),
+    person("Megan", "Mocko", role = c("aut"))
     )
 Description: Supplemental data sets for OpenIntro textbooks. Data sets from this package will be periodically merged
     into the OpenIntro package or the USData package.
@@ -17,4 +18,5 @@ RoxygenNote: 7.1.1
 Depends: 
     R (>= 2.10)
 Imports:
-    ggplot2
+    ggplot2,
+    dplyr
