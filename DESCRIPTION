@@ -3,6 +3,7 @@ Title: Data set repository for OpenIntro textbooks
 Version: 0.1.0
 Authors@R: c(
     person("Nick", "Paterno", email = "nicholas.paterno@gmail.com", role = c("aut","cre")), 
+    person("Mine", "\u00C7etinkaya-Rundel", email = "cetinkaya.mine@gmail.com", role = c("aut"), comment = c(ORCID = "0000-0001-6452-2420")),
     person("Frank", "Marfai", role = c("aut")),
     person("Adam", "Gilbert", role = c("aut")),
     person("Jana", "Archibald", role = c("aut")),
