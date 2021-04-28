@@ -107,7 +107,7 @@ Before proceeding, make sure you have your GitHub username and the email you use
         
         iii. Open RStudio and run the code below in the Console.
         
-            a. writeLines('PATH = "${RTOOLS40_HOME}\\usr\\bin; ${PATH}" ', con = "~/.Renviron)
+            a. writeLines('PATH = "${RTOOLS40_HOME}\\usr\\bin; ${PATH}" ', con = "~/.Renviron")
             
     C. Mac \& Windows
     
