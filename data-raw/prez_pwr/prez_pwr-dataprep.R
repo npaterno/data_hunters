@@ -1,6 +1,5 @@
 library(readr)
 library(dplyr)
-library(janitor)
 library(tidyr)
 
 # load data ---------------------------------------------------------------------
