@@ -1,9 +1,8 @@
-library(readxl)
 library(janitor)
 
 # load data --------------------------------------------------------------------
 
-us_crime_rates <- read_csv(here::here("data-raw/us_crime_rates/us_crime_rates.csv"),)
+us_crime_rates <- read_csv(here::here("data-raw/us_crime_rates/us_crime_rates.csv"))
 
 # cleaning: Change incorrect 0's values to NA
 
