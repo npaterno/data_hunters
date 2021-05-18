@@ -13,8 +13,13 @@
 #'   alot about, or is that beyond the president's control?"}
 #' @examples
 #'  library(ggplot2)
-#'  ggplot(prez_pwr, aes(has_pwr))+
-#'    geom_bar()
+#'  ggplot(prez_pwr, aes(has_pwr, fill = party))+
+#'    geom_bar()+
+#'    labs(title = "Is the price of gasoline something the president can do alot about, \nor is that beyond the president's control?",
+#'        x = "",
+#'        y = "Number of respondents",
+#'        fill = "Respondent Party")+
+#'    facet_wrap(~president)
 #'
 #' @source
 #'   [Pew Research Center, May 2006 & March 2012](https://www.pewresearch.org/fact-tank/2013/07/25/can-a-president-control-gas-prices-depends-on-when-you-ask/).
