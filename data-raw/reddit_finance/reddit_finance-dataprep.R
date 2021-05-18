@@ -8,22 +8,14 @@ library(stringr)
 raw_data <- read_csv(here::here("data-raw/reddit_finance/2020_reddit_finance.csv"),)
 
 # cleaning: 
-# Note: some cleaning done in Excel.  
-# fi = financial independence
-# re = retirement
+# Note: some preprocessing done in Excel.  
 reddit_finance <- raw_data %>% 
-  mutate(country = replace_na(country, "United States"), # Add Country
-         country = str_to_title(country))  # Adjust for lowercase & uppercase input
-  
- test_data <- reddit_finance %>% 
-   select(country, pan_experiences) %>% 
-   mutate(pan_experiences = strsplit(pan_experiences, ",")) %>% 
-   unnest(pan_experiences) %>% 
-   pivot_wider(values_from = country, 
-               names_from = pan_experiences,
-               values_fn = length
-   ) #creates multiple columns with the same name
- 
+  mutate(country = replace_na(country, "United States"), 
+         country = str_to_title(country),
+         retired = replace_na(retired, "No")) %>% 
+  filter(retired == "No") %>% 
+  select(-retired)
+
 # save -------------------------------------------------------------------------
 
-usethis::use_data(reddit_finance, overwrite= TRUE)
+usethis::use_data(reddit_finance, overwrite = TRUE)
