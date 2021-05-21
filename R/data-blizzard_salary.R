@@ -1,0 +1,23 @@
+#' Blizzard Employee Voluntary Salary Info.
+#'
+#' Employee generated anonymous survey of salary information.
+#'
+#' @format A data frame with 466 rows and 9 variables.
+#' \describe{
+#'   \item{timestamp}{Time data was entered}
+#'   \item{status}{Specifies employment status.}
+#'   \item{current_title}{Current job title.}
+#'   \item{current_salary}{Current salary (in USD).}
+#'   \item{salary_type}{Frequency with levels year, hour, week.}
+#'   \item{percent_incr}{Raise given July 2020.}
+#'   \item{other_info}{Other information submitted by employee.}
+#'   \item{location}{Current office of employment.}
+#'   \item{performance_rating}{Most recent review performance rating.}
+#' }
+#'
+#'
+#'
+#' @source
+#'   \href{https://www.bloomberg.com/news/articles/2020-08-03/blizzard-workers-share-salaries-in-revolt-over-wage-disparities}{Bloomberg}
+#'
+"blizzard_salary"
