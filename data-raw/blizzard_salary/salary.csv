@@ -41,11 +41,11 @@ timestamp,status,current_title,current_salary,salary_type,percent_incr,other_inf
 7/31/20 17:32,Full Time Employee,Senior Test Analyst,26.67,hour,10,,Irvine,Top
 7/31/20 15:12,Contractor,Assistant Digital Marketing Manager,27,hour,0,,Irvine,
 7/31/20 16:00,Contractor,Assistant Digital Marketing Manager,$27 ,hour,0,,Irvine,
-8/5/20 13:10,Full Time Employee,IT Support Specialist I,27.76,year,2,,Irvine,Successful
+8/5/20 13:10,Full Time Employee,IT Support Specialist I,27.76,hour,2,,Irvine,Successful
 8/11/20 12:40,Full Time Employee,Technical Test Analyst,$28.36 ,hour,3,Prevented from getting promotion due to last-minute requirements change. Now working toward an arbitrary additional carrot at the end of a stick before getting promoted.,Irvine,Successful
 7/31/20 16:42,Full Time Employee,Senior Test Analyst 1,29.2,hour,1.5,,Irvine,Successful
 8/3/20 20:09,Full Time Employee,Associate Game Designer,29.57,hour,2.5,,Irvine,Successful
-8/6/20 17:54,Contractor,Assistant Editor,$30 ,hour,0,,LACS,
+8/6/20 17:54,Contractor,Assistant Editor,$30 ,hour,0,,Los Angeles Center Studios,
 7/31/20 16:19,Full Time Employee,Senior Test Analyst II,33,hour,12,,Irvine,
 7/31/20 17:41,Full Time Employee,Associate Operations Administrator,33.95,hour,1.3,,Irvine,
 7/31/20 15:05,Full Time Employee,Associate Producer,36.27,hour,0,,Irvine,
@@ -66,9 +66,6 @@ timestamp,status,current_title,current_salary,salary_type,percent_incr,other_inf
 8/6/20 12:47,Full Time Employee,Software Engineer,$53 ,hour,1.5,,Irvine,Successful
 8/4/20 2:14,Full Time Employee,Software Engineer,54.73,hour,3.5,"<1y w/ company, no title changes yet",Irvine,Successful
 8/3/20 14:53,Full Time Employee,Cloud Systems Engineer,$62.50 ,hour,,New hire early 2020,Irvine,
-8/3/20 20:16,Full Time Employee,Animator,87,year,4,,Irvine,High
-8/3/20 12:23,Full Time Employee,,197,year,2,,Irvine,Successful
-8/4/20 3:39,Full Time Employee,Title,1020,year,4,,Irvine,Successful
 8/6/20 17:56,Contractor,Post Production,1625,week,8.3,"I have not received a performance rating. And I believe everyone should be able to share their rates anytime, anywhere.",Los Angeles,
 8/1/20 4:11,Full Time Employee,Game Master,28000,year,1,,Cork,Successful
 8/6/20 9:50,Full Time Employee,Game Master,30500,year,1.2,,Cork,Successful
@@ -94,7 +91,7 @@ timestamp,status,current_title,current_salary,salary_type,percent_incr,other_inf
 8/3/20 18:38,Full Time Employee,Specialist Game Master,"37,294",year,6.9,,Austin,High
 8/1/20 0:19,Full Time Employee,Specialist Game Master,37318,year,2.3,3.2% last year for the same rating. Salary band moved to 38300 this year,Cork,High
 8/3/20 3:46,Full Time Employee,"Producer, Creative Production",37500,year,2,Have always had increases in the 2 to 3 percent region even with High performance due to the bell curve system and arbitrary number restrictions on who can get bigger increases. Have entertained options at other companies that have offered up to x2.5 as much in terms of salary in cheaper CoL areas.,Versailles,Successful
-8/1/20 4:29,Full Time Employee,Specialist Gamemaster,37872,year,2.2,,"Cork, Ireland",High
+8/1/20 4:29,Full Time Employee,Specialist Gamemaster,37872,year,2.2,,Cork,High
 8/5/20 10:25,Full Time Employee,Customer Support,"$37,993 ",year,0,"Not had a pay increase in years, not even an increase to take into considering the cost of inflation which has gone up year after in France. CS is viewed as an entry level job that requires no skill to do, which is beyond the truth. Our workload has increased along with our tasks yet our wage remains the same.",Versailles,Developing
 8/6/20 13:02,Full Time Employee,Specialist Game Master,39000,year,1.2,I have been here for over 6 years,Austin,Successful
 8/6/20 11:07,Full Time Employee,Specialist Game Master,39083,year,1.2,,Austin,Successful
@@ -258,6 +255,7 @@ My ""High rating"" was only a 5 cents per hour raise above my ""Successful"" rat
 8/3/20 15:10,Full Time Employee,Producer,"85,200",year,,,Irvine,
 7/31/20 18:31,Full Time Employee,Associate Software Engineer,"86,000",year,,,Irvine,
 7/31/20 16:56,Full Time Employee,Game Designer,"86,340",year,3.5,,Irvine,
+8/3/20 20:16,Full Time Employee,Animator,87000,year,4,,Irvine,High
 7/31/20 15:10,Full Time Employee,Associate Software Engineer,"87,000",year,12.8,promotion,Irvine,
 8/3/20 14:10,Full Time Employee,Game Producer,"$87,000 ",year,3.5,,Irvine,Successful
 7/31/20 19:06,Full Time Employee,Associate UX Designer,87900,year,6,,Irvine,Successful
@@ -304,6 +302,7 @@ My ""High rating"" was only a 5 cents per hour raise above my ""Successful"" rat
 8/1/20 11:53,Full Time Employee,Associate Operations Engineer,101005,year,1,,Irvine,Successful
 8/4/20 15:58,Full Time Employee,SR. Financial Analyst,101250,year,1.25,,Irvine,High
 7/31/20 16:10,Full Time Employee,Game Designer,102000,year,2,,Irvine,Successful
+8/4/20 3:39,Full Time Employee,Title,102000,year,4,,Irvine,Successful
 8/3/20 22:29,Full Time Employee,Senior Game Designer I,102500,year,2.5,,Irvine,Successful
 7/31/20 22:18,Full Time Employee,Graphic Designer,"$102,502 ",year,2,"Joined October 2017 - $42.31/hr (~$88k annual)
 February 2019 - $48.31/hr (~$100k annual)
@@ -455,17 +454,18 @@ July 2020 - $49.28/hr (~$102k annual)",Irvine,High
 8/1/20 7:19,Full Time Employee,Technical Lead,"185,000",year,3,,Irvine,High
 8/4/20 12:30,Full Time Employee,Principal Software Engineer I,"186,000",year,2.9,,Irvine,Successful
 7/31/20 18:07,Full Time Employee,,195000,year,2,Currently hold the highest title in my team with a couple others.,Irvine,High
+8/3/20 12:23,Full Time Employee,,197000,year,2,,Irvine,Successful
 8/3/20 18:05,Full Time Employee,Principle Software Engineer I,198000,year,2.2,,Irvine,High
 8/3/20 15:45,Full Time Employee,Principal Software Engineer,"204,000",year,2,,Irvine,Successful
 8/2/20 21:26,Full Time Employee,Principal Software Engineer,216856,year,2.5,,Irvine,High
 8/4/20 14:10,Full Time Employee,CEO,"40,000,000",year,,,Los Angeles,Developing
-8/1/20 3:51,Full Time Employee,Specialist Game Master,"€34,160.73",year,1,,Cork,Successful
-8/1/20 4:25,Full Time Employee,Specialist Game Master,"€36468,94",year,1,,Cork,Successful
-8/4/20 11:33,Full Time Employee,Specialist Game Master,"33,000€",year,3,,Cork,High
-8/1/20 3:55,Full Time Employee,Customer Support Representative,"34,925€",year,2.5,Previous increments have been ~3.3%-4.5%. The backdating gives ~same as previous years but will mean lower amounts on upcoming years. Profit sharing for CS is also pathetic.,Cork,High
-8/7/20 3:06,Full Time Employee,Specialist ITC Game Master,35490 € ,year,2.5,Merit increases for this kind of performance rating used to be much much higher before that reform. CS is plagued with salary caps that are not even public knowledge anymore.,Versailles,High
-8/4/20 3:23,Full Time Employee,Specialist Game Master,35700E,year,1,,Cork,Successful
-8/2/20 4:39,Full Time Employee,CS Supervisor,45000 €,year,1,,Versailles,Successful
-8/10/20 9:53,Full Time Employee,Senior Project Manager,54000 €,year,16,"promoted, previous salary 47k €",Versailles,High
-3/15/21 13:28,Full Time Employee,,69000€,year,1,,Versailles,Successful
-7/31/20 15:55,Full Time Employee,Game Designer,"87, 298",year,4,,Irvine,
+8/1/20 3:51,Full Time Employee,Specialist Game Master,41591,year,1,,Cork,Successful
+8/1/20 4:25,Full Time Employee,Specialist Game Master,44402,year,1,,Cork,Successful
+8/4/20 11:33,Full Time Employee,Specialist Game Master,40178,year,3,,Cork,High
+8/1/20 3:55,Full Time Employee,Customer Support Representative,42522,year,2.5,Previous increments have been ~3.3%-4.5%. The backdating gives ~same as previous years but will mean lower amounts on upcoming years. Profit sharing for CS is also pathetic.,Cork,High
+8/7/20 3:06,Full Time Employee,Specialist ITC Game Master,43210,year,2.5,Merit increases for this kind of performance rating used to be much much higher before that reform. CS is plagued with salary caps that are not even public knowledge anymore.,Versailles,High
+8/4/20 3:23,Full Time Employee,Specialist Game Master,43465,year,1,,Cork,Successful
+8/2/20 4:39,Full Time Employee,CS Supervisor,54787,year,1,,Versailles,Successful
+8/10/20 9:53,Full Time Employee,Senior Project Manager,65745,year,16,"promoted, previous salary 47k €",Versailles,High
+3/15/21 13:28,Full Time Employee,,84008,year,1,,Versailles,Successful
+7/31/20 15:55,Full Time Employee,Game Designer,"87,298",year,4,,Irvine,
