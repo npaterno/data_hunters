@@ -101,7 +101,7 @@ Before proceeding, make sure you have your GitHub username and the email you use
             
     B. Windows
     
-        i. Go to the [RTools](https://cran.r-project.org/bin/windows/rtools) website.
+        i. Go to the RTools website (https://cran.r-project.org/bin/windows/rtools).
         
         ii. Install the x-86 version of RTools
         
