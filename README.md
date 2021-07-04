@@ -12,6 +12,7 @@ Our role is to collect and cultivate supplemental data sets for use in the `open
 --------------
 We will follow the process for adding new data outlined below and modified from the `openintro` package.
 
+If you are a better visual learner, there is a screencast linked at the bottom of this page.
  
 The following steps use the **devtools** and **usethis** packages for
 various steps. We recommend using this process when suggesting new
@@ -59,7 +60,7 @@ discussion before making the pull request.
 
 If you are new to GitHub and RStudio, this section will help you get them synced/talking to each other. There are instructions for Windows and Mac users. If you are a Linux user, please [contact me](mailto:nick@openintro.org) for help; for the most part you can follow the Mac instructions but getting RTools to install is different from Mac and can even vary between Linux distributions. 
 
-If you are a better visual learner, there will be workshops/live demos periodically. Additionally, there will be a series of screencasts made available in early May 2021. 
+If you are a better visual learner, there are screencasts linked at the bottom of this page. 
 
 Before proceeding, make sure you have your GitHub username and the email you use to login handy.
 
@@ -123,3 +124,11 @@ Before proceeding, make sure you have your GitHub username and the email you use
 If you would like to learn how to use R and/or GitHub, please send me an [email](mailto:nick@openintro.org). 
 
 If you would like to contribute without learning R or GitHub, please [email](mailto:nick@openintro.org) your data sets in csv format. Please include the source of the data. 
+
+# Video Resources
+-----------------
+
+1. [Syncing GitHub & RStudio: Mac Edition](https://youtu.be/yfCe39JKBTE)
+2. [Syncing GitHub & RStudio: Windows Edition](https://youtu.be/lHz-r2lJ2o8)
+3. [Contributing Data](https://youtu.be/MJGCELK0jSc)
+
