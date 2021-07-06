@@ -1,7 +1,4 @@
 library(readr)
-library(dplyr)
-library(tidyr)
-library(stringr)
 
 # load data ---------------------------------------------------------------------
 raw_data <- read.csv(here::here("data-raw/baby_names/baby_names.csv"))
