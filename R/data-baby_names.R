@@ -17,7 +17,8 @@
 #' baby_names %>% 
 #'   group_by(male) %>%
 #'   summarise(freq=n()) %>%
-#'   arrange(desc(freq))
+#'   arrange(desc(freq)) %>% 
+#'   top_n(n = 10)
 #'
 #' # List Female names in top 20 in both 1880 and 1980
 #'baby_names %>% 
