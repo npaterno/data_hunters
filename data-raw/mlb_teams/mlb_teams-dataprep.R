@@ -9,24 +9,54 @@ raw_data <- read.csv(here::here("data-raw/mlb_teams/mlb_teams.csv"))
 
 # rename columns
 raw_data %<>%
-  rename(Year=yearID,GamesPlayed=G,LeagueID=lgID,
-         TeamID=teamID,FranchiseID=franchID,DivisionID=divID,
-         GamesPlayedHome=Ghome,Wins=W,Losses=L,
-         DivisionWinner=DivWin,WildCardWinner=WCWin,LeagueWinner=LgWin,
-         WorldSeriesWinner=WSWin,RunsScored=R,AtBats=AB,Hits=H,Doubles=X2B,
-         Triples=X3B,Homeruns=HR,Walks=BB,StrikeoutsByBatters=SO,StolenBases=SB,
-         CaughtStealing=CS,BattersHitByPitch=HBP,SacrificeFlies=SF,
-         OpponentsRunsScored=RA,EarnedRunsAllowed=ER,EarnedRunAverage=ERA,
-         CompleteGames=CG,Shutouts=SHO,Saves=SV,OutsPitches=IPouts,
-         HitsAllowed=HA,HomerunsAllowed=HRA,WalksAllowed=BBA,
-         StrikeoutsByPitchers=SOA,Errors=E,DoublePlays=DP,FieldingPercentage=FP,
-         TeamName=name,BallPark=park,HomeAttendance=attendance,
-         BattersParkFactor=BPF,PitchersParkFactor=PPF)
+  rename(Year=yearID,
+         GamesPlayed=G,
+         LeagueID=lgID,
+         TeamID=teamID,
+         FranchiseID=franchID,
+         DivisionID=divID,
+         HomeGames=Ghome,
+         Wins=W,
+         Losses=L,
+         DivisionWinner=DivWin,
+         WildCardWinner=WCWin,
+         LeagueWinner=LgWin,
+         WorldSeriesWinner=WSWin,
+         RunsScored=R,
+         AtBats=AB,
+         Hits=H,
+         Doubles=X2B,
+         Triples=X3B,
+         Homeruns=HR,
+         Walks=BB,
+         StrikeoutsByBatters=SO,
+         StolenBases=SB,
+         CaughtStealing=CS,
+         BattersHitByPitch=HBP,
+         SacrificeFlies=SF,
+         OpponentsRunsScored=RA,
+         EarnedRunsAllowed=ER,
+         EarnedRunAverage=ERA,
+         CompleteGames=CG,
+         Shutouts=SHO,
+         Saves=SV,
+         OutsPitches=IPouts,
+         HitsAllowed=HA,
+         HomerunsAllowed=HRA,
+         WalksAllowed=BBA,
+         StrikeoutsByPitchers=SOA,
+         Errors=E,DoublePlays=DP,
+         FieldingPercentage=FP,
+         TeamName=name,
+         BallPark=park,
+         HomeAttendance=attendance,
+         BattersParkFactor=BPF,
+         PitchersParkFactor=PPF) %>% 
+  janitor::clean_names()
 
 # drop some columns
-raw_data <- subset(raw_data,select=-c(teamIDBR,teamIDlahman45,teamIDretro))
-
-mlb_teams<- raw_data
+mlb_teams <- subset(raw_data,select=-c(team_idbr,team_i_dlahman45,team_i_dretro, team_id, franchise_id, batters_park_factor, pitchers_park_factor)) %>% 
+                      filter(league_id %in% c("AL", "NL"))
 
 # save --------------------------------------------------------------------------
 
