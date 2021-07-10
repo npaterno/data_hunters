@@ -1,0 +1,70 @@
+#' Major League Baseball Teams Data.
+#' 
+#' From Lahman’s Baseball Database http://www.seanlahman.com/baseball-archive/statistics/
+
+#'
+#' @format A data frame with 2955 rows and 45 variables.
+#' \describe{
+#'   \item{Year}{Year.}
+#'   \item{LeagueID}{League.}
+#'   \item{TeamID}{Team.}
+#'   \item{FranchiseID}{Franchise.}
+#'   \item{DivisionID}{Division of team.}
+#'   \item{Rank}{Position in final standings.}
+#'   \item{GamesPlayed}{Games played.}
+#'   \item{GamesPlayedHome}{Games played at home.}
+#'   \item{Wins}{Wins.}
+#'   \item{Losses}{Losses.}
+#'   \item{DivisionWinner}{Division Winner.}
+#'   \item{WildCardWinner}{Wild Card Winner.}
+#'   \item{LeagueWinner}{League Champion.}
+#'   \item{WorldSeriesWinner}{World Series Winner.}
+#'   \item{RunsScored}{Runs scored.}
+#'   \item{AtBats}{At bats.}
+#'   \item{Hits}{Hits by batters.}
+#'   \item{Doubles}{Doubles.}
+#'   \item{Triples}{Triples.}
+#'   \item{Homeruns}{Homeruns by batters.}
+#'   \item{Walks}{Walks by batters.}
+#'   \item{StrikeoutsByBatters}{Strikeouts by batters.}
+#'   \item{StolenBases}{Stolen bases.}
+#'   \item{CaughtStealing}{Caught stealing.}
+#'   \item{BattersHitByPitch}{Batters hit by pitch.}
+#'   \item{SacrificeFlies}{Sacrifice flies.}
+#'   \item{OpponentsRunsScored}{Opponents runs scored.}
+#'   \item{EarnedRunsAllowed}{Earned runs allowed.}
+#'   \item{EarnedRunAverage}{Earned run average.}
+#'   \item{CompleteGames}{Complete games.}
+#'   \item{Shutouts}{Shutouts.}
+#'   \item{Saves}{Saves.}
+#'   \item{OutsPitches}{Outs Pitched innings pitched times 3.}
+#'   \item{HitsAllowed}{Hits allowed.}
+#'   \item{HomerunsAllowed}{Homeruns allowed.}
+#'   \item{WalksAllowed}{Walks allowed.}
+#'   \item{StrikeoutsByPitchers}{Strikeouts by pitchers.}
+#'   \item{Errors}{Errors.}
+#'   \item{DoublePlays}{Double Plays.}
+#'   \item{FieldingPercentage}{Fielding  percentage.}
+#'   \item{TeamName}{Full name of team.}
+#'   \item{BallPark}{Home ballpark name.}
+#'   \item{HomeAttendance}{Home attendance total.}
+#'   \item{BattersParkFactor}{Three year park factor for batters.}
+#'   \item{PitchersParkFactor}{Three year park factor for pitchers.}
+#' }
+#' @examples
+#' library(dplyr)
+#' 
+#' # List the World Series winning teams for each year
+#' mlb_teams %>% 
+#'   filter(WorldSeriesWinner=="Y")%>%
+#'   select(Year,TeamName,BallPark)
+#'
+#' # List the teams with their average number of wins and losses
+#'  mlb_teams %>%
+#'    group_by(TeamName)%>%
+#'    summarize(mean_wins=mean(Wins),mean_losses=mean(Losses))%>%
+#'    arrange((TeamName))
+#'
+#' @source [Lahmans Baseball Database](http://www.seanlahman.com/baseball-archive/statistics/)
+#'
+"mlb_teams"
