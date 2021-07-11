@@ -52,8 +52,9 @@ discussion before making the pull request.
     the check should be about the package size. If any other ERRORs,
     NOTEs, or WARNINGs are generated, resolve them or open an issue for
     help.
-10. Run `usethis::pr_push()` to submit the pull request. After the request had been merged, run `usethis::pr_finish()`.
-11. Please DO NOT edit the description or namespace files.
+10. Commit the changes made in the git tab of RStudio.
+11. Run `usethis::pr_push()` to submit the pull request. After the request had been merged, run `usethis::pr_finish()`.
+12. Please DO NOT edit the description or namespace files.
 
 # Getting GitHub and RStudio to Sync
 ------------------------------------
