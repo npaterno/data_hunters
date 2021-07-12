@@ -45,7 +45,7 @@ body camera and it may have recorded some portion of the incident.}
 fatal_police_shootings
 }
 \description{
-From Washington Post https://github.com/washingtonpost/data-police-shootings
+A subset of the Washington Post database. Contains records of every fatal police shooting by an on-duty officer since January 1, 2015.
 }
 \examples{
 library(dplyr)

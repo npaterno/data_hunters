@@ -33,14 +33,14 @@
 #'   \item{whn_fin_indy_num}{At what amount invested did you consider yourself Financially Independent? (AKA what was your "FI number")}
 #'   \item{fin_indy_lvl}{Which of the following would you have considered yourself at the time you reached Financial Independence:}
 #'   \item{retire_age}{At what age do you intend to retire?}
-#'   \item{stop_whn_fin_indy}{Do you intend to stop working for money when you reach financial independence?}
+#'   \item{stp_whn_fin_indy}{Do you intend to stop working for money when you reach financial independence?}
 #'   \item{industry}{Which of the following best describes the industry in which you currently or most recently work(ed)?}
 #'   \item{employer}{Which of the following best describes your current or most recent employer?}
 #'   \item{role}{Which of the following best describes your current or most recent job role?}
-#'   \item{ft_status}{What is your current employment status? [Full Time]}
-#'   \item{pt_status}{What is your current employment status? [Part Time, Regular]}
-#'   \item{gig_status}{What is your current employment status? [Side Gig, Intermittent]}
-#'   \item{ne_status}{What is your current employment status? [Not Employed]}
+#'   \item{ft_status}{What is your current employment status? - Full Time}
+#'   \item{pt_status}{What is your current employment status? - Part Time, Regular}
+#'   \item{gig_status}{What is your current employment status? -Side Gig, Intermittent}
+#'   \item{ne_status}{What is your current employment status? -Not Employed}
 #'   \item{edu_status}{What is your current educational status?}
 #'   \item{housing}{What is your current housing situation?}
 #'   \item{home_value}{Primary residence value.}
