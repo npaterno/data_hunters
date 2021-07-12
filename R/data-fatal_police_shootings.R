@@ -1,6 +1,6 @@
 #' Fatal Police Shootings data.
 #' 
-#' From Washington Post https://github.com/washingtonpost/data-police-shootings
+#' A subset of the Washington Post database. Contains records of every fatal police shooting by an on-duty officer since January 1, 2015.
 #'
 #' @format A data frame with 6421 rows and 12 variables.
 #' \describe{
