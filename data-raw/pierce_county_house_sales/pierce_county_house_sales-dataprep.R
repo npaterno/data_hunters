@@ -1,11 +1,8 @@
 library(readr)
 library(dplyr)
 # load data ---------------------------------------------------------------------
-#raw_data <- read.csv(here::here("data-raw/pierce_county_house_sales/pierce_county_house_sales.csv"))
-setwd("c:/users/khig/desktop/data_hunters/")
+raw_data <- read.csv(here::here("data-raw/pierce_county_house_sales/pierce_county_house_sales.csv"))
 
-
-raw_data <- read.csv("data-raw/pierce_county_house_sales/pierce_county_house_sales.csv")
 # cleaning ----------------------------------------------------------------------
 
 # drop parcel number column

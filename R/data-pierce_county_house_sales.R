@@ -1,14 +1,13 @@
 #' Pierce County House Sales Data for 2020
 #' 
-#' From Pierce County, Washington https://www.piercecountywa.gov/736/Data-Downloads
-
+#' Real estate sales for Pierce County, WA in 2020.
 #'
 #' @format A data frame with 16814 rows and 19 variables.
 #' \describe{
 #'   \item{sale_date}{Date the legal document (deed) was executed.}
 #'   \item{sale_price}{Dollar amount recorded for the sale.}
 #'   \item{house_square_feet}{Sum of the square feet for the building.}
-#'   \item{attic_finished_square_feet}{ Finished living area in the attic.}
+#'   \item{attic_finished_square_feet}{Finished living area in the attic.}
 #'   \item{basement_square_feet}{Total square footage of the basement..}
 #'   \item{attached_garage_square_feet}{Total square footage of the 
 #'    attached or built in garage(s).}
@@ -20,7 +19,7 @@
 #'    i.e. Forced Air, Electric Baseboard, Steam, etc. .}
 #'   \item{exterior}{Predominant type of construction materials used for
 #'    the exterior siding on Residential Buildings.}
-#'   \item{interior}{ Predominant type of materials used on the interior
+#'   \item{interior}{Predominant type of materials used on the interior
 #'     walls. i.e. Sheetrock or Paneling.}
 #'   \item{stories}{Number of floors/building levels above grade. Stories 
 #'    do not include attic or basement areas.}
@@ -55,7 +54,7 @@
 #'  arrange(desc(freq))
 #'    
 #' # List house sales frequency and average price group by waterfront type
-#'pierce_county_house_sales %>%
+#' pierce_county_house_sales %>%
 #'  group_by(waterfront_type) %>%
 #'  summarize(freq=n(),mean_price=mean(sale_price))%>%   
 #'  arrange(desc(mean_price)) 
