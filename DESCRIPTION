@@ -19,6 +19,19 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Depends: 
     R (>= 2.10)
-Imports:
-    ggplot2,
-    dplyr
+Suggests: 
+    broom,
+    dplyr,
+    forcats,
+    knitr,
+    lubridate,
+    scales,
+    testthat (>= 3.0.0),
+    tidyr,
+    tidytext
+Imports: 
+    ggplot2 (>= 2.2.1),
+    graphics,
+    readr,
+    rmarkdown,
+    tibble
