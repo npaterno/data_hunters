@@ -1,6 +1,6 @@
 #' Population Age 2019 Data.
 #' 
-#' From Centers for Disease Control and Prevention https://wonder.cdc.gov/Bridged-Race-v2019.HTML
+#' State level data on population by age.
 #'
 #' @format A data frame with 2820 rows and 4 variables.
 #' \describe{
