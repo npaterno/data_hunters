@@ -53,7 +53,7 @@ discussion before making the pull request.
     NOTEs, or WARNINGs are generated, resolve them or open an issue for
     help.
 10. Commit the changes made in the git tab of RStudio.
-11. Run `usethis::pr_push()` to submit the pull request. After the request had been merged, run `usethis::pr_finish()`.
+11. Run `usethis::pr_push()` to submit the pull request. This will open a new tab in your browser with a pull request form filled out in GitHub. Submit the request by pressing the green "Create pull request" button. After the request had been merged, run `usethis::pr_finish()`.
 12. Please DO NOT edit the description or namespace files.
 
 # Getting GitHub and RStudio to Sync
