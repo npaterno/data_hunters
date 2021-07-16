@@ -18,15 +18,15 @@ in 2030.}
 \item{fertility_2018}{Number of live births per woman in 2018.A total
 fertility level of 2.1 is called replacement level and represents a
 level at which the population would remain the same size. }
-\item{life_expectancy_1970}{Life expectancy at birth in 2017.}
+\item{life_expectancy_1970}{Life expectancy at birth in 1970.}
 \item{life_expectancy_2000}{Life expectancy at birth in 2000.}
 \item{life_expectancy_2018}{Life expectancy at birth in 2018.}
 \item{dependency_ratio_total}{The ratio of the not-working-age
-population to the working-age population of 15–64 years.}
+population to the working-age population of 15 - 64 years.}
 \item{dependency_ratio_child}{The ratio of the under 15 population
-to the working-age population of 15–64 years.}
+to the working-age population of 15 - 64 years.}
 \item{dependency_ratio_oldage}{The ratio of the  over 64 population
-to the working-age population of 15–64 years.}
+to the working-age population of 15 - 64 years.}
 \item{percent_urban_2018}{Percent of population living in urban areas.}
 \item{pop_urban_growth_rate_2018}{Annual urban population growth rate
 from 2000 to 2018.}
@@ -37,16 +37,17 @@ rate from 2018 to 2030.}
 }
 }
 \source{
-\href{https://data.unicef.org/resources/dataset/sowc-2019-statistical-tables/}{United Nations Children’s Emergency Fund (UNICEF)}
+\href{https://data.unicef.org/resources/dataset/sowc-2019-statistical-tables/}{United Nations Children's Emergency Fund (UNICEF)}
 }
 \usage{
 sowc_demographics
 }
 \description{
-From United Nations Children’s Emergency Fund (UNICEF)
+Demographic data from UNICEF's State of the World's Children 2019 Statistical Tables.
 }
 \examples{
 library(dplyr)
+library(ggplot2)
 
 # List countries and areas' life expectancy, ordered by rank of life expectancy in 2018
 sowc_demographics \%>\%
@@ -61,6 +62,15 @@ sowc_demographics \%>\%
   mutate(population_millions = total_pop_2018/1000) \%>\%
   select(countries_and_areas,rank,migration_rate,population_millions) \%>\%
   arrange(rank)
+  
+# Scatterplot of life expectancy v population in 2018
+ggplot(sowc_demographics, aes(life_expectancy_1970, life_expectancy_2018, size = total_pop_2018))+
+ geom_point(alpha = 0.5)+
+ labs(title = "Life Expectancy",
+  subtitle = "1970 v. 2018", 
+  x = "Life Expectancy in 1970",
+  y = "Life Expectancy in 2018",
+  size = "2018 Total Population")
 
 }
 \keyword{datasets}
