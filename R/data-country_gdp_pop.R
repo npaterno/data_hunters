@@ -5,8 +5,7 @@
 #' @format A data frame with 216 rows and 64 variables.
 #' \describe{
 #'   \item{country}{Name of country.}
-#'   \item{gdp}{Gross domestic product in millions of United States dollars. Note that
-#'   no GDP figures were available for some countries.}
+#'   \item{gdp}{Gross domestic product in millions of United States dollars. Notes: 1. GDP figures were unavailable for some countries. 2. Most figures are from 2020. Those in italcs at World Bank: GDP below are from 2018 or 2019.}
 #'   \item{rank}{rank of country by GPD.}
 #'   \item{year_1960}{population in 1960.}
 #'   \item{year_1961}{population in 1961.}   
@@ -87,7 +86,8 @@
 #'   select(rank_pop_change,country,percent_change) %>%
 #'   arrange(rank_pop_change)
 
-#' @source [World Bank](https://data.worldbank.org/indicator/SP.POP.TOTL and
-#'   https://datacatalog.worldbank.org/dataset/gdp-ranking)
+#' @source 
+#'  [World Bank: Population](https://data.worldbank.org/indicator/SP.POP.TOTL) 
+#'  [World Bank: GDP](https://databank.worldbank.org/data/download/GDP.pdf)
 #'
 "country_gdp_pop"
