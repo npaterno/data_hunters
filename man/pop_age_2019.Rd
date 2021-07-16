@@ -21,7 +21,7 @@ A data frame with 2820 rows and 4 variables.
 pop_age_2019
 }
 \description{
-From Centers for Disease Control and Prevention https://wonder.cdc.gov/Bridged-Race-v2019.HTML
+State level data on population by age.
 }
 \examples{
 library(dplyr)
