@@ -1,8 +1,8 @@
-#' Country Population Data.
+#' World Population Data.
 #' 
 #' From World Bank, population 1960-2020
 #'
-#' @format A data frame with 216 rows and 64 variables.
+#' @format A data frame with 216 rows and 62 variables.
 #' \describe{
 #'   \item{country}{Name of country.}
 #'   \item{year_1960}{population in 1960.}
@@ -71,30 +71,30 @@
 #' @examples
 #' library(dplyr)
 #' library(ggplot2)
-#' library(reshape2)
+#' library(tidyr)
 #' 
 #' # List percentage of population change from 1960 to 2020
-#' country_data_pop %>%
+#' world_pop %>%
 #'   mutate(percent_change = round((year_2020-year_1960)/year_2020*100,2)) %>%
 #'   mutate(rank_pop_change = round(rank(-percent_change)),0) %>%
 #'   select(rank_pop_change,country,percent_change) %>%
 #'   arrange(rank_pop_change)
 #' 
 #'  # Graph population in millions by decade for specified countries
-#' which <- c("China","India", "United States")
-#' country_data_pop %>%
-#'   subset(select = c(country,year_1960, year_1970,year_1980,year_1990,
-#'     year_2000,year_2010,year_2020)) %>%
-#'   melt(id.vars = "country") %>%
-#'   filter(country %in% which) %>%
-#'   mutate(value = value/100000) %>%
-#'   ggplot(aes(variable,value, col=country)) + 
-#'   geom_point() + 
-#'   stat_smooth(method="loess",formula = "y ~ x") +
-#'   ggtitle("Population in Millions by Decade") +
-#'    xlab("Year") + ylab("Population in millions")
-#' 
+#' world_pop %>%
+#'  select(c(country,year_1960, year_1970,year_1980,year_1990, year_2000,year_2010,year_2020)) %>%
+#'  filter(country %in% c("China","India", "United States")) %>%
+#'  pivot_longer(cols = c(year_1960, year_1970, year_1980, year_1990, year_2000, year_2010, year_2020),
+#'               names_to = "year",
+#'               values_to = "population") %>% 
+#'  mutate(year = as.numeric(gsub("year_", "", year)))%>% 
+#'  ggplot(aes(year,population, color=country)) + 
+#'  geom_point() + 
+#'  geom_smooth(method="loess",formula = "y ~ x") +
+#'  labs(title="Population", subtitle = "by Decade", 
+#'       x = "Year", y ="Population (in millions)", 
+#'       color = "Country")
 #' 
 #' @source [World Bank](https://data.worldbank.org/indicator/SP.POP.TOTL)
 #'
-"country_data_pop"
+"world_pop"

@@ -2,7 +2,7 @@ library(readr)
 
 
 # load data ---------------------------------------------------------------------
-raw_data <- read.csv(here::here("data-raw/country_data_pop/country_data_pop.csv"))
+raw_data <- read.csv(here::here("data-raw/world_pop/world_pop.csv"))
 
 # cleaning ----------------------------------------------------------------------
 
@@ -10,8 +10,8 @@ raw_data <- read.csv(here::here("data-raw/country_data_pop/country_data_pop.csv"
 colnames(raw_data)[1] <- "country" 
 
 
-country_data_pop<- raw_data
+world_pop<- raw_data
 
 # save --------------------------------------------------------------------------
 
-usethis::use_data(country_data_pop, overwrite = TRUE)
+usethis::use_data(world_pop, overwrite = TRUE)
