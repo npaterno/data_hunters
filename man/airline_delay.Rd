@@ -17,7 +17,7 @@ A data frame with 3351 rows and 21 variables.
 \item{arr_del15}{Number of flights more than 15 minutes late}
 \item{carrier_ct}{Number of flights delayed due to air carrier. (e.g. no crew)}
 \item{weather_ct}{Number of flights due to weather.}
-\item{nas_ct}{Number of flights delayed due to National Aciation System (e.g. heavy air traffic).}
+\item{nas_ct}{Number of flights delayed due to National Aviation System (e.g. heavy air traffic).}
 \item{security_ct}{Number of flights canceled due to a security breach.}
 \item{late_aircraft_ct}{Number of flights delayed as a result of another flight on the same aircraft delayed}
 \item{arr_cancelled}{Number of cancelled flights}
@@ -40,17 +40,11 @@ airline_delay
 Summary Data counts for airline per carrier per US City.
 }
 \examples{
-
-# Example 1
 library(ggplot2)
 year_of_flights = as.factor(airline_delay$year)
-ggplot(data =airline_delay)+
- geom_point(mapping = aes(x=arr_flights, y = arr_del15, color = year_of_flights)) +
- labs( x= "Number of arrival flights", y = "Number of flights delayed by more than 15 mins", title = "Arrival vs Delayed flights by year") 
+ggplot(airline_delay, aes(arr_flights, arr_del15, color = as.factor(year)))+
+   geom_point(alpha = 0.3) +
+ labs( x= "Total Number of inbound flights", y = "Number of flights delayed by more than 15 mins", title = "Inbound vs delayed flights by year", color = "Year") 
 
-# Example 2
-ggplot(airline_delay, aes(x=arr_del15))+
-geom_histogram(fill = "lightblue", color = "black")+
-facet_grid(year ~.) 
 }
 \keyword{datasets}
