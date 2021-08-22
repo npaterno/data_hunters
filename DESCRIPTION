@@ -2,13 +2,14 @@ Package: datahunter
 Title: Data set repository for OpenIntro textbooks
 Version: 0.1.0
 Authors@R: c(
-    person("Nick", "Paterno", email = "nicholas.paterno@gmail.com", role = c("aut","cre")), 
+    person("Nick", "Paterno", email = "nicholas.paterno@gmail.com", role = c("aut","cre"), comment = c(ORCID = "0000-0002-8335-6234")), 
     person("Mine", "\u00C7etinkaya-Rundel", email = "cetinkaya.mine@gmail.com", role = c("aut"), comment = c(ORCID = "0000-0001-6452-2420")),
     person("Frank", "Marfai", role = c("aut")),
     person("Adam", "Gilbert", role = c("aut")),
     person("Jana", "Archibald", role = c("aut")),
     person("Megan", "Mocko", role = c("aut")),
-    person("Karen", "Higgins", role = c("aut"))
+    person("Karen", "Higgins", role = c("aut")),
+    person("Thiago", "Scarelli", role = c("aut"), comment = c(ORCID = "0000-0003-2014-2084"))
     )
 Description: Supplemental data sets for OpenIntro textbooks. Data sets from this package will be periodically merged
     into the OpenIntro package or the USData package.
