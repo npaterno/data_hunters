@@ -2,6 +2,8 @@
 #' 
 #' From World Bank, GDP in current U.S. dollars 1960-2020 by decade
 #'
+#' @name gdp_countries
+#' @docType data
 #' @format A data frame with 659 rows and 9 variables.
 #' \describe{
 #'   \item{country}{Name of country.}
@@ -15,6 +17,7 @@
 #'   \item{year_2010}{value in 2010}   
 #'   \item{year_2020}{value in 2020}
 #' }
+#' 
 #' @examples
 #' library(dplyr)
 #' # don't use scientific notation
@@ -37,5 +40,6 @@
 #'   top_n(n = 10)  
 #'
 #' @source [World Bank](https://databank.worldbank.org/home.aspx)
-#'
+#' @keywords datasets 
+#' 
 "gdp_countries"
