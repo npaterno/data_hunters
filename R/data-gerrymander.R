@@ -1,6 +1,6 @@
 #' Gerrymander
 #'
-#' A dataset on gerrymandering and its influence on House elections.
+#' A dataset on gerrymandering and its influence on House elections. The data set was originally built by Jeff Whitmer.
 #'
 #' @name gerrymander
 #' @docType data
@@ -19,8 +19,21 @@
 #'   \item{flip18}{Did a Democrat flip the seat in the 2018 election? Levels of 1 (yes) and 0 (no).}
 #'   \item{gerry}{Categorical variable for prevalence of gerrymandering with levels of low, mid and high.}
 #' }
-#' @source [Name of Source As It Will Appear in the Help File](url for source)
+#' @source [Washington Post](https://www.washingtonpost.com/news/wonk/wp/2014/05/15/americas-most-gerrymandered-congressional-districts/)
 #' @keywords datasets
 #'
 #' @examples 
+#' library(ggplot2)
+#' library(dplyr)
+#' ggplot(gerrymander %>% filter(gerry != "mid"), aes(clinton16, dem16, color = gerry)) +
+#'  geom_jitter(height = 0.05, size = 3, shape = 1) +
+#'  geom_smooth(method = "glm", method.args = list(family = "binomial"), se = FALSE) +
+#'  scale_color_manual(values = c("purple", "orange")) +
+#'  labs(
+#'    title = "Logistic Regression of 2016 House Elections",
+#'    subtitle = "by Congressional District",
+#'    x = "Percent of Presidential Vote Won by Clinton",
+#'    y = "Seat Won by Democrat Candidate",
+#'    color = "Gerrymandering"
+#'  )
 "gerrymander"
