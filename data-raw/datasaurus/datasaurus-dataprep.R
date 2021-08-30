@@ -1,10 +1,10 @@
 
 library(tidyverse)
-library(rio)
+library(readr)
 
 # Import data -----------------------------------------------------------------
 
-datasaurus <- rio::import("DatasaurusDozen.tsv")
+datasaurus <- read_tsv(here::here("data-raw/datasaurus/DatasaurusDozen.tsv"))
 
 # Save ------------------------------------------------------------------------
 
