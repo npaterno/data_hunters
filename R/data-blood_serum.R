@@ -1,0 +1,89 @@
+#' Acute Exercise, Prostate Cancer Cell Growth, and Immune System Cell Growth.
+#'
+#' Blood serum is a component of blood important to the immune system.
+#' In this study, blood serum was collected from 10 men, both before
+#' and immediately after exercise. Each of these serum samples, two from
+#' each man, were then exposed to two types of cells. The first type,
+#' LNCaP, is a type of prostate cancer cell. The second type, NIH3T3,
+#' is an immune system cell. The growth of the two types of cells was
+#' recorded after 48 hours.
+#'
+#' @name blood_serum
+#' @docType data
+#' @format A data frame with 40 rows and 4 variables.
+#' \describe{
+#'   \item{patient}{A number assigned to each patient.}
+#'   \item{cell}{Type of cell, either "LNCaP" (prostate cancer cell)
+#'     or "NIH3T3" (immune system cell).}
+#'   \item{serum}{When the serum was collected, either "before" or "after" exercise.}
+#'   \item{growth}{Cell proliferation, measured in arbitrary units.
+#'     (Arbitrary units mean relative values are important but the
+#'     absolute values are not.)}
+#' }
+#'
+#' @examples
+#' library(ggplot2)
+#' head(blood_serum)
+#' table(blood_serum$patient)
+#' qplot(
+#'   ifelse(serum == "after", 1, 0),
+#'   growth,
+#'   data = blood_serum,
+#'   geom = "line",
+#'   color = patient
+#' ) +
+#'   facet_grid(cols = vars(cell)) +
+#'   xlab("Before (0) and After (1)")
+#' 
+#' 
+#' x <- subset(blood_serum, patient == 13 & cell == "NIH3T3")
+#' blood_serum_change <- do.call(rbind.data.frame, by(
+#'   blood_serum,
+#'   data.frame(blood_serum$patient, blood_serum$cell),
+#'   function(x) {
+#'     x$change <- x$growth[x$serum == "after"] - x$growth[x$serum == "before"]
+#'     x$growth <- NULL
+#'     x$serum <- NULL
+#'     return(x[1, ])
+#'   }
+#' ))
+#' 
+#' # t-test methodologies follow.
+#' 
+#' # First, look at the groups separately, which are similar to the analyses
+#' # done in the paper.
+#' bsc_cancer <- subset(blood_serum_change, cell == "LNCaP")
+#' t.test(bsc_cancer$change)
+#' bsc_immune <- subset(blood_serum_change, cell == "NIH3T3")
+#' t.test(bsc_immune$change)
+#' 
+#' # In this next test, we treat the immune cells as the controls for the
+#' # cancer cells from the corresponding individual, and the results are
+#' # no longer statistically different from zero. This is effectively a
+#' # "difference of differences" analysis.
+#' # (Not 100% sure this comparison is valid, particularly if the units
+#' # of growth vary from one cell type to the next.)
+#' immune_to_cancer_map <- match(bsc_cancer$patient, bsc_immune$patient)
+#' t.test(bsc_immune$change[immune_to_cancer_map] - bsc_cancer$change)
+#' 
+#' # Visualize the differences between the two types of cells for each
+#' # of the 10 individuals.
+#' qplot(
+#'   ifelse(cell == "NIH3T3", 0, 1),
+#'   change,
+#'   data = blood_serum_change,
+#'   geom = "line",
+#'   color = patient
+#' ) + xlab("Immune Cell (0) and Cancer Cell (1)")
+#' # Another way to run the test using both cell types is with multiple
+#' # regression. The result exactly matches the last t-test above.
+#' m <- lm(
+#'   change ~ cell + patient,
+#'   data = blood_serum_change
+#' )
+#' summary(m)
+#'
+#' @source [Rundqvist H, Augsten M, et al. 2013. Effect of Acute Exercise on Prostate Cancer Cell Growth. PLOS One 8(7):e67579](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0067579).
+#' @keywords datasets
+#'
+"blood_serum"

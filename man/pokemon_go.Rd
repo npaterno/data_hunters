@@ -5,7 +5,7 @@
 \alias{pokemon_go}
 \title{Pokémon Go evolutions}
 \format{
-A data frame with 875 rows and 12 variables.
+A data frame with 75 rows and 27 variables.
 \describe{
 \item{name}{A unique name given to the Pokémon}
 \item{species}{The Pokémon's type, e.g. Pidgey.}

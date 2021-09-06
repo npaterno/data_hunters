@@ -32,7 +32,9 @@
 #' Pidgey species. Next expand to include the Caterpie and
 #' Weedle species, and eventually, the Eevee species.
 #'
-#' @format A data frame with 875 rows and 12 variables.
+#' @name pokemon_go
+#' @docType data
+#' @format A data frame with 75 rows and 27 variables.
 #' \describe{
 #'   \item{name}{A unique name given to the Pokémon}
 #'   \item{species}{The Pokémon's type, e.g. Pidgey.}
