@@ -67,7 +67,6 @@
 #'   \item{attack_strong_value_new}{The damage done by the post-evolution stronger attack.}
 #'   \item{notes}{Any additional notes made while collecting the data.}
 #' }
-#'
 #' @examples
 #' table(pokemon_go$species)
 #' pg_pidgey <- subset(pokemon_go, species == "Pidgey")
@@ -78,9 +77,7 @@
 #' m <- lm(cp_new ~ cp, data = pg_pidgey)
 #' summary(m)
 #' abline(m)
-#'
 #' @source
 #'   This is an original data set by OpenIntro that was collected in 2016.
-#'
 #'
 "pokemon_go"

@@ -20,7 +20,6 @@
 #'     (Arbitrary units mean relative values are important but the
 #'     absolute values are not.)}
 #' }
-#'
 #' @examples
 #' library(ggplot2)
 #' head(blood_serum)
@@ -82,7 +81,6 @@
 #'   data = blood_serum_change
 #' )
 #' summary(m)
-#'
 #' @source [Rundqvist H, Augsten M, et al. 2013. Effect of Acute Exercise on Prostate Cancer Cell Growth. PLOS One 8(7):e67579](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0067579).
 #' @keywords datasets
 #'
