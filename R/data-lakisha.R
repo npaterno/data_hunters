@@ -9,9 +9,9 @@
 #' @docType data
 #' @format A tibble with 4870 observations of 65 variables.
 #' \describe{
-#'   \item{id}{ID}                                                              
-#'   \item{ad}{Ad #}                                                            
-#'   \item{education}{0=not reported; 1=HSD; 2=HSG; 3=some col; 4=col +}        
+#'   \item{id}{ID.}                                                              
+#'   \item{ad}{Ad #.}                                                            
+#'   \item{education}{Highest education with levels of 0=not reported; 1 = High School Diploma; 2 = High School Graduate; 3 = some college; 4 = college +.}        
 #'   \item{ofjobs}{number of jobs listed on resume}                             
 #'   \item{yearsexp}{number of years of work experience on the resume}          
 #'   \item{honors}{1=resume mentions some honors}                               
