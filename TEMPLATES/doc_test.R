@@ -11,6 +11,7 @@
 ## Step 1: Restart R using keyboard shortcuts or under 'Session' in the menu bar.
 ### Windows: ctrl-shift-F10
 ### Mac: cmd-shift-F10
+.rs.restartR()
 
 ## Step 2: Load the package
 devtools::load_all()
@@ -19,8 +20,12 @@ devtools::load_all()
 devtools::document()
 
 ## Step 4: Restart R
+.rs.restartR()
 
-## Step 5: Check the help file by replacing name_of_dataset with the name of the new data.
+## Step 5: Load the package
+devtools::load_all()
+
+## Step 6: Check the help file by replacing name_of_dataset with the name of the new data.
 ?name_of_dataset
 
 ## If you don't get any errors and everything looks as it should, proceed to testing. If 
@@ -29,6 +34,7 @@ devtools::document()
 # Testing New Datasets --------------------------------------------------------------------
 
 ## Step 1: Restart R
+.rs.restartR()
 
 ## Step 2: Load the package
 devtools::load_all()
