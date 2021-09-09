@@ -7,77 +7,77 @@
 \format{
 A tibble with 4870 observations of 65 variables.
 \describe{
-\item{id}{ID}
-\item{ad}{Ad #}
-\item{education}{0=not reported; 1=HSD; 2=HSG; 3=some col; 4=col +}
-\item{ofjobs}{number of jobs listed on resume}
-\item{yearsexp}{number of years of work experience on the resume}
-\item{honors}{1=resume mentions some honors}
-\item{volunteer}{1=resume mentions some volunteering experience}
-\item{military}{1=applicant has some military experience}
-\item{empholes}{1=resume has some employment holes}
-\item{occupspecific}{Occup. Specific}
-\item{occupbroad}{Occup. Broad}
-\item{workinschool}{1=resume mentions some work experience while at school}
-\item{email}{1=email address on applicant's resume}
-\item{computerskills}{1=resume mentions some computer skills}
-\item{specialskills}{1=resume mentions some special skills}
-\item{firstname}{applicant's first name}
-\item{sex}{sex}
-\item{race}{race}
-\item{h}{1=high quality resume}
-\item{l}{1=low quality resume}
-\item{call}{1=applicant was called back}
-\item{city}{c=chicago; b=boston}
-\item{kind}{kind}
-\item{adid}{employment ad identifier}
-\item{fracblack}{frac blacks in applicant's zip}
-\item{fracwhite}{frac whites in applicant's zip}
-\item{lmedhhinc}{log median HH income in applicant's zip}
-\item{fracdropout}{frac HS dropouts in applicant's zip}
-\item{fraccolp}{frac college educ or more in applicant's zip}
-\item{linc}{log per capita income in applicant's zip}
-\item{col}{applicant has college degree or more}
-\item{expminreq}{min experience required, if any}
-\item{schoolreq}{specific education requirement, if any}
-\item{eoe}{1=ad mentions employer is EOE}
-\item{parent_sales}{sales of parent company}
-\item{parent_emp}{employment of parent company}
-\item{branch_sales}{sales of branch}
-\item{branch_emp}{emp of branch}
-\item{fed}{employer is federal contractor}
-\item{fracblack_empzip}{fraction blacks in employers's zipcode}
-\item{fracwhite_empzip}{fraction whites in employer's zipcode}
-\item{lmedhhinc_empzip}{log median HH income in employer's zipcode}
-\item{fracdropout_empzip}{fraction HS dropouts in employer's zipcode}
-\item{fraccolp_empzip}{fraction college or more in employer's  zipcode}
-\item{linc_empzip}{log per capita income in employer's zipcode}
-\item{manager}{manager wanted}
-\item{supervisor}{supervisor wanted}
-\item{secretary}{secretary wanted}
-\item{offsupport}{offsupport}
-\item{salesrep}{sales representative wanted}
-\item{retailsales}{retail sales worker wanted}
-\item{req}{1=ad mentions any requirement for job}
-\item{expreq}{1=ad mentions some experience requirement}
-\item{comreq}{1=ad mentions some communication skills requirement}
-\item{educreq}{1=ad mentions some educational requirement}
-\item{compreq}{1=ad mentions some computer skill requirement}
-\item{orgreq}{1=ad mentions some organizational skills requirement}
-\item{manuf}{employer industry is manufacturing}
-\item{transcom}{employer industry is transport/communication}
-\item{bankreal}{employer industry is finance, insurance, real estate}
-\item{trade}{employer industry is wholesale or retail trade}
-\item{busservice}{employer industry is business and personal  services}
-\item{othservice}{employer industry is health, educ. and social  services}
-\item{missind}{employer industry is other/unknown}
-\item{ownership}{ownership status of employer}
+\item{id}{Identifier.}
+\item{ad}{Ad number.}
+\item{education}{Highest education, with levels of 0 = not reported; 1 = high school diploma; 2 = high school graduate; 3 = some college; 4 = college or more.}
+\item{n_jobs}{Number of jobs listed on resume.}
+\item{years_exp}{Number of years of work experience on the resume.}
+\item{honors}{Indicator variable for which 1 = resume mentions some honors.}
+\item{volunteer}{Indicator variable for which 1 = resume mentions some volunteering experience.}
+\item{military}{Indicator variable for which 1 = resume mentions some military experience.}
+\item{emp_holes}{Indicator variable for which 1 = resume mentions some employment holes.}
+\item{occup_specific}{Occupation specific code}
+\item{occup_broad}{Occupation broad code}
+\item{work_in_school}{Indicator variable for which 1 = resume mentions some work experience while at school}
+\item{email}{Indicator variable for which 1 = email address on applicant's resume.}
+\item{computer_skills}{Indicator variable for which 1 = resume mentions some computer skills.}
+\item{special_skills}{Indicator variable for which 1 = resume mentions some special skills.}
+\item{first_name}{Applicant's first name.}
+\item{sex}{Sex, with levels of 'f' = female; 'm' = male.}
+\item{race}{Race, with levels of 'b' = black; 'w' = white.}
+\item{h}{Indicator variable for which 1 = high quality resume.}
+\item{l}{Indicator variable for which 1 = low quality resume.}
+\item{call}{Indicator variable for which 1 = applicant was called back.}
+\item{city}{City, with levels of 'c' = chicago; 'b' = boston.}
+\item{kind}{Kind, with levels of 'a'; 's' (unclear what they correspond to)}
+\item{ad_id}{Employment ad identifier.}
+\item{frac_black}{Fraction of blacks in applicant's zip.}
+\item{frac_white}{Fraction of whites in applicant's zip.}
+\item{l_med_hh_inc}{Log median household income in applicant's zip.}
+\item{frac_dropout}{Fraction of high-school dropouts in applicant's zip.}
+\item{frac_colp}{Fraction of college degree or more in applicant's zip}
+\item{l_inc}{Log per capita income in applicant's zip.}
+\item{col}{Indicator variable for which 1 = applicant has college degree or more.}
+\item{expminreq}{Minimum experience required, if any.}
+\item{school_req}{Specific education requirement, if any.}
+\item{eoe}{Indicator variable for which 1 = ad mentions employer is 'Equal Opportunity Employer'.}
+\item{parent_sales}{Sales of parent company.}
+\item{parent_emp}{Employment of parent company.}
+\item{branch_sales}{Sales of branch.}
+\item{branch_emp}{Employment of branch.}
+\item{fed}{Indicator variable for which 1 = employer is a federal contractor.}
+\item{frac_black_emp_zip}{Fraction of blacks in employers's zipcode.}
+\item{frac_white_emp_zip}{Fraction of whites in employer's zipcode.}
+\item{l_med_hh_inc_emp_zip}{Log median household income in employer's zipcode.}
+\item{frac_dropout_emp_zip}{Fraction of high-school dropouts in employer's zipcode.}
+\item{frac_colp_emp_zip}{Fraction of college degree or more in employer's  zipcode.}
+\item{l_inc_emp_zip}{Log per capita income in employer's zipcode.}
+\item{manager}{Indicator variable for which 1 = executives or managers wanted.}
+\item{supervisor}{Indicator variable for which 1 = administrative supervisors wanted.}
+\item{secretary}{Indicator variable for which 1 = secretaries or legal assistants wanted.}
+\item{off_support}{Indicator variable for which 1 = clerical workers wanted.}
+\item{sales_rep}{Indicator variable for which 1 = sales representative wanted.}
+\item{retail_sales}{Indicator variable for which 1 = retail sales worker wanted.}
+\item{req}{Indicator variable for which 1 = ad mentions any requirement for job.}
+\item{exp_req}{Indicator variable for which 1 = ad mentions some experience requirement.}
+\item{com_req}{Indicator variable for which 1 = ad mentions some communication skills requirement.}
+\item{educ_req}{Indicator variable for which 1 = ad mentions some educational requirement.}
+\item{comp_req}{Indicator variable for which 1 = ad mentions some computer skill requirement.}
+\item{org_req}{Indicator variable for which 1 = ad mentions some organizational skills requirement.}
+\item{manuf}{Indicator variable for which 1 = employer industry is manufacturing.}
+\item{trans_com}{Indicator variable for which 1 = employer industry is transport or communication.}
+\item{bank_real}{Indicator variable for which 1 = employer industry is finance, insurance or real estate.}
+\item{trade}{Indicator variable for which 1 = employer industry is wholesale or retail trade.}
+\item{bus_service}{Indicator variable for which 1 = employer industry is business or personal  services.}
+\item{oth_service}{Indicator variable for which 1 = employer industry is health, education or social  services.}
+\item{miss_ind}{Indicator variable for which 1 = employer industry is other or unknown.}
+\item{ownership}{Ownership status of employer, with levels of 'non-profit'; 'private'; 'public'}
 }
 }
 \source{
 Bertrand, Marianne, and Mullainathan, Sendhil. Replication data for: Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination. Nashville, TN: American Economic Association [publisher], 2004. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2019-12-06. \url{https://doi.org/10.3886/E116023V1}.
 
-The description of the variables follows the labels present in the original dataset.
+Note: The description of the variables follows closely the labels provided in the original dataset, with small edits for clarity.
 }
 \usage{
 lakisha
