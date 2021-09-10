@@ -87,6 +87,5 @@ with(
 m <- lm(cp_new ~ cp, data = pg_pidgey)
 summary(m)
 abline(m)
-
 }
 \keyword{datasets}

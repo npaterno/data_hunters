@@ -92,6 +92,5 @@ m <- lm(
   data = blood_serum_change
 )
 summary(m)
-
 }
 \keyword{datasets}
