@@ -49,7 +49,8 @@ lakisha <- lakisha %>% rename(n_jobs = ofjobs,
                               bus_service = busservice,
                               oth_service = othservice,
                               miss_ind = missind
-)
+) %>% 
+  select(-c(id, ad)) #removed as it's unclear what these represent
 
 # save --------------------------------------------------------------------------
 usethis::use_data(lakisha, overwrite = TRUE)

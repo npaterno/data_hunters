@@ -7,10 +7,8 @@
 #'
 #' @name lakisha
 #' @docType data
-#' @format A tibble with 4870 observations of 65 variables.
-#' \describe{
-#'   \item{id}{Identifier.}                                                              
-#'   \item{ad}{Ad number.}                                                            
+#' @format A tibble with 4870 observations of 63 variables.
+#' \describe{                                                          
 #'   \item{education}{Highest education, with levels of 0 = not reported; 1 = high school diploma; 2 = high school graduate; 3 = some college; 4 = college or more.}        
 #'   \item{n_jobs}{Number of jobs listed on resume.}                             
 #'   \item{years_exp}{Number of years of work experience on the resume.}          
@@ -18,8 +16,8 @@
 #'   \item{volunteer}{Indicator variable for which 1 = resume mentions some volunteering experience.}           
 #'   \item{military}{Indicator variable for which 1 = resume mentions some military experience.}                  
 #'   \item{emp_holes}{Indicator variable for which 1 = resume mentions some employment holes.}                        
-#'   \item{occup_specific}{Occupation specific code}                                      
-#'   \item{occup_broad}{Occupation broad code}                                            
+#'   \item{occup_specific}{1990 Census Occupation Code. See sources for a key.}                                      
+#'   \item{occup_broad}{Occupation broad with levels 1 = executives and managerial occupations, 2 = administrative supervisors, 3 = sales representatives, 4 = sales workers, 5 = secretaries and legal assistants, 6 = clerical occupations}                                            
 #'   \item{work_in_school}{Indicator variable for which 1 = resume mentions some work experience while at school}
 #'   \item{email}{Indicator variable for which 1 = email address on applicant's resume.}                        
 #'   \item{computer_skills}{Indicator variable for which 1 = resume mentions some computer skills.}              
@@ -31,7 +29,7 @@
 #'   \item{l}{Indicator variable for which 1 = low quality resume.}                                             
 #'   \item{call}{Indicator variable for which 1 = applicant was called back.}                                   
 #'   \item{city}{City, with levels of 'c' = chicago; 'b' = boston.}                                           
-#'   \item{kind}{Kind, with levels of 'a'; 's' (unclear what they correspond to)}                                                            
+#'   \item{kind}{Kind, with levels of 'a' = administrative; 's' = sales.}                                                            
 #'   \item{ad_id}{Employment ad identifier.}                                      
 #'   \item{frac_black}{Fraction of blacks in applicant's zip.}                           
 #'   \item{frac_white}{Fraction of whites in applicant's zip.}                           
@@ -40,13 +38,13 @@
 #'   \item{frac_colp}{Fraction of college degree or more in applicant's zip}
 #'   \item{l_inc}{Log per capita income in applicant's zip.}                      
 #'   \item{col}{Indicator variable for which 1 = applicant has college degree or more.}                           
-#'   \item{expminreq}{Minimum experience required, if any.}                          
-#'   \item{school_req}{Specific education requirement, if any.}                   
+#'   \item{expminreq}{Minimum experience required, if any (in years when numeric).}                          
+#'   \item{school_req}{Specific education requirement, if any. 'hsg' = high school graduate, 'somcol' = some college, 'colp' = four year degree or higher}                   
 #'   \item{eoe}{Indicator variable for which 1 = ad mentions employer is 'Equal Opportunity Employer'.} 
-#'   \item{parent_sales}{Sales of parent company.}                               
-#'   \item{parent_emp}{Employment of parent company.}                            
-#'   \item{branch_sales}{Sales of branch.}                                       
-#'   \item{branch_emp}{Employment of branch.}                                           
+#'   \item{parent_sales}{Sales of parent company (in millions of US $).}                               
+#'   \item{parent_emp}{Number of parent company employees.}                            
+#'   \item{branch_sales}{Sales of branch (in millions of US $).}                                       
+#'   \item{branch_emp}{Number of branch employees.}                                           
 #'   \item{fed}{Indicator variable for which 1 = employer is a federal contractor.}                                 
 #'   \item{frac_black_emp_zip}{Fraction of blacks in employers's zipcode.}            
 #'   \item{frac_white_emp_zip}{Fraction of whites in employer's zipcode.}             
@@ -77,7 +75,11 @@
 #'   }
 #' @source Bertrand, Marianne, and Mullainathan, Sendhil. Replication data for: Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination. Nashville, TN: American Economic Association \[publisher\], 2004. Ann Arbor, MI: Inter-university Consortium for Political and Social Research \[distributor\], 2019-12-06. \url{https://doi.org/10.3886/E116023V1}.
 #' 
-#' Note: The description of the variables follows closely the labels provided in the original dataset, with small edits for clarity.
+#' [NBER Working Papers](https://www.nber.org/system/files/working_papers/w9873/w9873.pdf)
+#' 
+#' [1990 Census Occupation Codes](https://usa.ipums.org/usa/volii/occ1990.shtml)
+#' 
+#' Note: The description of the variables follows closely the labels provided in the original dataset, with small edits for clarity. 
 #' @keywords datasets
 #' @examples
 #' library(dplyr)
